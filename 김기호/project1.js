@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let shuffledImages = shuffleArray(images); // 이미지 배열을 섞은 배열로 초기화
     let firstCard = null; // 첫 번째 선택된 카드
     let secondCard = null; // 두 번째 선택된 카드
-    let lockBoard = ture; // 보드 잠금 상태
+    let lockBoard = false; // 보드 잠금 상태
     let timer; // 타이머 변수
     let timerInterval; // 타이머 인터벌 변수
     let score; // 점수 변수
