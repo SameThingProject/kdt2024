@@ -37,6 +37,8 @@ document.addEventListener('DOMContentLoaded', () => {
         shuffledImages = shuffleArray(images); // 이미지 배열 섞기
         score = 0; // 점수 초기화
         combo = 0; // 콤보 초기화
+        
+        timerDisplay.textContent = "제한 시간: 01:00";
         updateScoreDisplay(); // 점수 디스플레이 업데이트
         shuffledImages.forEach(image => { // 섞인 이미지 배열을 돌며 카드 생성 및 추가
             const cardElement = document.createElement('div'); // 카드 요소 생성
