@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>기억력 카드 게임</title>
+    <link rel="stylesheet" href="3. 게임 실행 화면 copy.css">
+</head>
+<body>
+    <!--상단 메뉴 - 타이머, 레벨 표시, 점수, 돌아가기 버튼 -->
+    <div id="top-menu">
+        <div id="timer">남은 시간 01:00</div>  
+        <div id = "level-container">
+            <h1>Level Easy</h1>
+        </div>
+        <div id = "score-box">
+            <p> 점수 : <span id="score" >0</span></p>
+        </div>
+        <button id = "again-button" onclick="location.href='http://127.0.0.1:5500/2.%20%EB%82%9C%EC%9D%B4%EB%8F%84%20%EC%84%A0%ED%83%9D%20%ED%99%94%EB%A9%B4.html'"><img id="again" src="again.png" alt="다시 하기 버튼"></button>
+    </div>
+    <!--게임 스타트 버튼, 점수 디스플레이, 카드들 -->
+    <div class="container">
+        <button id="start-button"><h1>Game Start!</h1></button> 
+        <div id = "combo-animation">
+            <div id="score-change"></div>
+        </div>
+        <div id="game-board"></div>
+    </div>
+    <script src="3. 게임 실행 화면 copy.js"></script>
+</body>
+</html>
+
