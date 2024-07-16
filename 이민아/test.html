@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>기억력 카드 게임</title>
+    <link rel="stylesheet" href="test.css">
+</head>
+<body>
+        
+    <h1>기억력 카드 게임</h1>
+    <button id="start-button">게임 시작</button>
+
+<!--레벨 선택-->
+    <div id="level-selector" style="display: none;">
+        <button class="level-button" id="easy-button">easy</button>
+        <button class="level-button" id="normal-button">normal</button>
+        <button class="level-button" id="hard-button">hard</button>
+    </div>
+
+<!--점수 기능-->
+    <p id="score-text">점수: <span id="score">0</span></p>
+    <div id="score-change"></div>
+
+    <div id="game-board"></div>
+    <script src="test.js"></script>
+
+</body>
+</html>
