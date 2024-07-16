@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let score;
     let combo;
     let selectedDifficulty;
+    let isRunning = false;
 
     const container = document.getElementById('container');
     const startbg = document.getElementById('start-bg');
@@ -52,6 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function startGame() {
+        isRunning = true;
         if (timerInterval) {
             clearInterval(timerInterval); // 기존 타이머 인터벌 초기화
         }
@@ -83,7 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
         setTimeout(() => {
             showAllCards();
-        }, 1000);
+        }, 1000)
     }
 
     function restartGame() {
@@ -111,14 +113,17 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     
     function showAllCards() {
+        isRunning = true;
         document.querySelectorAll('.card').forEach(card => card.classList.add('flipped'));
         setTimeout(() => {
             document.querySelectorAll('.card').forEach(card => card.classList.remove('flipped'));
+            isRunning = true;
             startTimer();
         }, 3000);
     }
 
     function startTimer() {
+        isRunning = false;
         timer = 180;
         timerInterval = setInterval(() => {
             timer--;
@@ -134,7 +139,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function flipCard() {
-        if (lockBoard) return;
+        if (lockBoard || isRunning) return;
         if (this === firstCard) return;
 
         this.classList.add('flipped');
