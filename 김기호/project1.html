@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>기억력 카드 게임</title>
+    <link rel="stylesheet" href="project2.css">
+</head>
+<body>
+    <div id="start-bg">
+        <button id="help" class="help">?</button>
+        <div id="b1">
+            <p id="main-p">기억력 카드 게임</p>
+            <div class="wrapper">
+                <button id="start-button">Game Start!</button>
+            </div>
+        </div>
+    </div>
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span id="closeModal" class="close">&times;</span>
+            <h2>*게임 설명*</h2>
+            <p>제한 시간 안에 같은 동물 그림의 카드를 매칭 하세요.</p>
+            <p>매칭 성공 시 <strong>+30점</strong>, 실패 시 <strong>-10점</strong>이 부여됩니다.</p>
+            <p>연속 매칭 성공 시, 보너스 점수를 얻습니다.</p>
+        </div>
+    </div>
+        <div id="difficulty-selection" class="hidden">
+            <div id="container">
+                <h1 id="level-h1">Level</h1>
+                <button class="difficulty-button" data-difficulty="Easy">Easy</button>
+                <button class="difficulty-button" data-difficulty="Normal">Normal</button>
+                <button class="difficulty-button" data-difficulty="Hard">Hard</button>
+            </div>
+        </div>
+    <div id="timer" class="hidden">제한 시간: 3분</div>
+    <div id="difficulty-display" class="hidden">난이도: </div>
+    <div id="score" class="hidden">점수: 0</div>
+    <div id="score-change" class="hidden"></div>
+    <div id="game-board"></div>
+    <div id="hint-button" class="hidden"></div>
+    <div id="end-screen" class="hidden">
+        <button id="restart-button">다시하기</button>
+    </div>
+    <script src="project2.js"></script>
+</body>
+</html>
