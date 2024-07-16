@@ -81,7 +81,9 @@ document.addEventListener('DOMContentLoaded', () => {
             cardElement.addEventListener('click', flipCard);
             gameBoard.appendChild(cardElement);
         });
-        showAllCards();
+        setTimeout(() => {
+            showAllCards();
+        }, 1000);
     }
 
     function restartGame() {
