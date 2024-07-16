@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>기억력 카드 게임</title>
+    <link rel="stylesheet" href="project2.css">
+</head>
+<body>
+    <div id="start-bg">
+        <button id="help" class="help">?</button>
+        <div id="b1">
+            <p id="main-p">기억력 카드 게임</p>
+            <div class="wrapper">
+                <button id="start-button">Game Start!</button>
+            </div>
+        </div>
+    </div>
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span id="closeModal" class="close">&times;</span>
+            <h2>게임 방법</h2>
+            <p><strong>1. 같은 카드 매칭</strong><br>모양이 같은 카드를 찾아 매칭하세요</p>
+            <p><strong>2. 제한 시간</strong><br>제한 시간안에 모든 카드를 매칭하세요</p>
+            <p><strong>3. 콤보</strong><br>연속으로 매칭 성공시 보너스 점수를 얻습니다.</p>
+        </div>
+    </div>
+        <div id="container">
+            <div id="difficulty-selection" class="hidden">
+                <h1 id="level-h1">Level</h1>
+                <button class="difficulty-button" data-difficulty="easy">Easy</button>
+                <button class="difficulty-button" data-difficulty="normal">Normal</button>
+                <button class="difficulty-button" data-difficulty="hard">Hard</button>
+            </div>
+        </div>
+    <div id="timer" class="hidden">제한 시간: 1분</div>
+    <div id="score" class="hidden">점수: 0</div>
+    <div id="score-change" class="hidden"></div>
+    <div id="game-board"></div>
+    <div id="end-screen" class="hidden">
+        <button id="restart-button">다시하기</button>
+    </div>
+    <script src="project2.js"></script>
+</body>
+</html>
