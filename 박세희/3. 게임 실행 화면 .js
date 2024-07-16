@@ -16,15 +16,15 @@ document.addEventListener('DOMContentLoaded', () => {
     let combo; // 콤보 변수
 
     const gameBoard = document.getElementById('game-board'); // 게임 보드 요소 참조
-    const startButton = document.getElementById('st-button'); // 시작 버튼 요소 참조
+    const stButton = document.getElementById('st-button'); // 시작 버튼 요소 참조
     const timerDisplay = document.getElementById('timer'); // 타이머 디스플레이 요소 참조
     const scoreDisplay = document.getElementById('score'); // 점수 디스플레이 요소 참조
     const scoreChangeDisplay = document.getElementById('score-change'); // 점수 변화 디스플레이 요소 참조
 
-    startButton.addEventListener('click', startGame); // 시작 버튼 클릭 시 startGame 함수 실행
+    stButton.addEventListener('click', startGame); // 시작 버튼 클릭 시 startGame 함수 실행
 
     function startGame() { // 게임 시작 함수
-        startButton.style.display = 'none'; // 시작 버튼 숨기기
+        stButton.style.display = 'none'; // 시작 버튼 숨기기
         gameBoard.innerHTML = ''; // 게임 보드 초기화
         shuffledImages = shuffleArray(images); // 이미지 배열 섞기
         score = 0; // 점수 초기화
@@ -101,7 +101,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 clearInterval(timerInterval); // 인터벌 해제
                 setTimeout(() => {
                     alert(`모든 카드를 맞췄습니다! 최종 점수: ${score}`); // 알림 표시
-                    startButton.style.display = 'block'; // 시작 버튼 표시
+                    stButton.style.display = 'block'; // 시작 버튼 표시
                     gameBoard.innerHTML = ''; // 게임 보드 초기화
                 }, 500);
             }
@@ -179,7 +179,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function endGame() { // 게임 종료 함수
         alert(`시간 종료! 게임 오버. 최종 점수: ${score}`); // 알림 표시
-        startButton.style.display = 'block'; // 시작 버튼 표시
+        stButton.style.display = 'block'; // 시작 버튼 표시
         gameBoard.innerHTML = ''; // 게임 보드 초기화
         clearInterval(timerInterval); // 인터벌 해제
     }
