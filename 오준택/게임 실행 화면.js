@@ -104,6 +104,7 @@ document.addEventListener('DOMContentLoaded', () => {
         gameBoard.innerHTML = '';
         hintcnt = 3;
         hintButton.innerHTML = `Hint: ${hintcnt}`;
+
     }
 
     function getShuffledImages(difficulty) {
@@ -272,6 +273,9 @@ document.addEventListener('DOMContentLoaded', () => {
         gameBoard.classList.add('hidden');
         gameBoard.innerHTML = '';
         hintButton.classList.add('hidden'); // 힌트 버튼 비활성화
+        timerDisplay.classList.add('hidden');
+        scoreDisplay.classList.add('hidden');
+        header.classList.add('hidden');
         clearInterval(timerInterval);
     }
 });
