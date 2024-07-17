@@ -33,30 +33,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const restartButton = document.getElementById('restart-button');
     const difficultyButtons = document.querySelectorAll('.difficulty-button');
     const difficultyDisplay = document.getElementById('difficulty-display');
-
-    // /*(추가) 레벨 선택으로 돌아가는 버튼 구현 중..*/
-    // backButton.addEventListener('click', () => {
-    //     clearInterval(timerInterval);
-    //     gameBoard.innerHTML = ''; 
-    //     header.classList.add('hidden'); 
-    //     timerDisplay.classList.add('hidden');
-    //     scoreDisplay.classList.add('hidden');
-    //     scoreChangeDisplay.classList.add('hidden');
-    //     endScreen.classList.add('hidden'); // 게임 종료 화면 숨기기
-    //     difficultySelection.classList.remove('hidden'); // 난이도 선택 화면 보이기
-    
-    //     firstCard = null;
-    //     secondCard = null;
-    //     lockBoard = false;
-    //     score = 0;
-    //     combo = 0;
-    //     isRunning = false;
-    
-    //     difficultyButtons.forEach(button => {
-    //         button.addEventListener('click', () => selectDifficulty(button.dataset.difficulty));
-    //     });
-    // });
-    
     
     startButton.addEventListener('click', showDifficultySelection);
     difficultyButtons.forEach(button => {
@@ -156,7 +132,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function startTimer() {
         isRunning = false;
-        timer = 120;
+        timer = 2;
         timerInterval = setInterval(() => {
             timer--;
             const minutes = Math.floor(timer / 60);
