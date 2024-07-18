@@ -270,7 +270,7 @@ h1 {
     left: 30%;
     top: 17%;
     z-index: 2;
-    position: fixed;
+    position: sticky;
 }
 
 #level-h1{
