@@ -46,6 +46,23 @@ document.addEventListener('DOMContentLoaded', () => {
     // 시작 버튼 클릭 시 난이도 선택 화면 표시
     startButton.addEventListener('click', showDifficultySelection);
 
+    // 모달 표시 함수
+    function showModal() {
+        var modal = document.getElementById("modal");
+        modal.style.display = "block";
+    }
+
+    // help 버튼 클릭 시 모달 표시
+    document.getElementById("help").onclick = function() {
+        showModal();
+    }
+
+    // 모달 닫기 버튼 설정
+    var closeModal = document.getElementById("closeModal");
+    closeModal.onclick = function() {
+        var modal = document.getElementById("modal");
+        modal.style.display = "none";
+    }
     function showDifficultySelection() {
         startbg.classList.add('hidden');
         startButton.classList.add('hidden');
@@ -411,21 +428,3 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     
 });
-
-// 모달 표시 함수
-function showModal() {
-    var modal = document.getElementById("modal");
-    modal.style.display = "block";
-}
-
-// help 버튼 클릭 시 모달 표시
-document.getElementById("help").onclick = function() {
-    showModal();
-}
-
-// 모달 닫기 버튼 설정
-var closeModal = document.getElementById("closeModal");
-closeModal.onclick = function() {
-    var modal = document.getElementById("modal");
-    modal.style.display = "none";
-}
