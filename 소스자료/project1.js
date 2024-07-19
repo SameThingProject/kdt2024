@@ -276,7 +276,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 1000);
     }
 
-    // 게임 종료 함수
+    // 이미지 배열 셔플 함수
     function shuffleArray(array) {
         let currentIndex = array.length, randomIndex;
 
