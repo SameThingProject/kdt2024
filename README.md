@@ -1,3 +1,4 @@
-# Project-1: Same Card Matching Web game
-## CSS UI기반
+# Project-1: 카드 매칭 웹 게임 개발
+## CSS UI기반 JS활용 간편한 웹 게임 개발하기
+
 Team_1 - 김기호 이민아 오준택 박세희
